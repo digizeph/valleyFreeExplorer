@@ -1,0 +1,13 @@
+* Valley-Free Explorer
+
+Valley-Free Explorer is a golang-based application that takes in a CAIDA AS-relationship data file,
+and infer BGP paths based on valley-free model.
+
+** Usage
+
+To build: ~go build~
+
+To run: ~valleyFreeExplorer -d DATAFILE ASN1 ASN2 ASN3 ...~
+
+Example: ~valleyFreeExplorer.exe -data 20161101.as-rel.txt.bz2 15169~
+This will infer all paths from all ASes toward AS15169 (Google Inc.), and store the paths in file ~paths/15169-paths.txt.gz~.
